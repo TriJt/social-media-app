@@ -2,6 +2,8 @@
     flex: 3;
     height: calc(100vh - 50px);
     overflow-y:scroll ;
+    position: sticky;
+    top: 50px;
 }
 ::-webkit-scrollbar{ 
     width: 5px;
@@ -15,6 +17,7 @@
 }
 .sidebarWrapper{ 
     margin-left: 20px;
+    padding-top: 20px;
 }
 .sidebarList{ 
     padding: 0;
@@ -28,6 +31,7 @@
 }
 .sidebarIcon{ 
     margin-left: 15px;
+    margin-right: 10px;
 }
 .sidebarButton{ 
     width: 150px;
@@ -44,16 +48,4 @@
     padding: 0;
     margin: 0;
     list-style: none;
-}
-.sidebarFriend{ 
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-.sidebarFriendImg{ 
-    width: 32px;
-    height: 32px;
-    border-radius: 50px;
-    object-fit: 10px;
-
 }

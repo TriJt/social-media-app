@@ -3,6 +3,8 @@ import './sidebar.css'
 import RssFeedIcon from '@mui/icons-material/RssFeed';
 import {Chat, Group, Bookmark,QuestionAnswer, Work, Event, School} from '@mui/icons-material'
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import {Users} from "../../dummyData"
+import CloseFriend from '../closeFriend/CloseFriend';
 
 export default function Sidebar() {
   return (
@@ -49,26 +51,9 @@ export default function Sidebar() {
           <button className='sidebarButton'>Show More</button> 
           <hr className="sidebarHr" />
           <ul className="sidebarFriendList">
-              <li className="sidebarFriend">
-                <img src="/assets/person/bae.jpg" alt="FriendImage" className="sidebarFriendImg" />
-                <span className="sidebarFriendName">Huynh Giao</span>
-              </li>
-              <li className="sidebarFriend">
-                <img src="/assets/person/bae.jpg" alt="FriendImage" className="sidebarFriendImg" />
-                <span className="sidebarFriendName">Huynh Giao</span>
-              </li>
-              <li className="sidebarFriend">
-                <img src="/assets/person/bae.jpg" alt="FriendImage" className="sidebarFriendImg" />
-                <span className="sidebarFriendName">Huynh Giao</span>
-              </li>
-              <li className="sidebarFriend">
-                <img src="/assets/person/bae.jpg" alt="FriendImage" className="sidebarFriendImg" />
-                <span className="sidebarFriendName">Huynh Giao</span>
-              </li>
-              <li className="sidebarFriend">
-                <img src="/assets/person/bae.jpg" alt="FriendImage" className="sidebarFriendImg" />
-                <span className="sidebarFriendName">Huynh Giao</span>
-              </li>
+            {Users.map(u => (
+              <CloseFriend key={u.id} user = {u} />
+            ))}
           </ul>
       </div>
     </div>

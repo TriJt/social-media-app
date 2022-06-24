@@ -1,11 +1,13 @@
-import React from 'react'
+
+
 import './closeFriend.css'
 
 
-export default function CloseFriend() {
+export default function CloseFriend({user}) {
   return (
-    <div>
-      
-    </div>
+    <li className="sidebarFriend">
+    <img src={user.profilePicture} alt="FriendImage" className="sidebarFriendImg" />
+    <span className="sidebarFriendName">{user.username}</span>
+  </li>
   )
 }
